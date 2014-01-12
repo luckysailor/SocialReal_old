@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-SocialReal::Application.config.secret_key_base = 'c3dd9fa89f8431f28a502260c984e298e2fc04064e51220ab5d176d552916d0cb69c731ce9996e445ae41053d3995f64f2a7b811fe62e2ab3477baabe0ce93ec'
+SocialReal::Application.config.secret_key_base = ENV['SOCIALREAL_TOKEN']
