@@ -1,4 +1,4 @@
-SOCIAL - RE![SocialReal Logo](https://github.com/SocialReal/SocialReal/blob/master/logo.gif)L
+# SOCIAL - RE ![SocialReal Logo](https://raw.github.com/SocialReal/SocialReal/master/logo.gif) L
 
 By [SocialReal](https://github.com/SocialReal/).
 
@@ -7,8 +7,8 @@ By [SocialReal](https://github.com/SocialReal/).
   - Supply of informations in real time
   - Created for persons respected with important subjects about news and articles
   - A new IRC
----
 
+---
 ###-Acknowledgements
 
   - Astro - Inventor
@@ -21,4 +21,4 @@ License
 MIT
 
 ---
-****** 2014 - Social-Real / This is our official repository. ******
+** 2014 - Social-Real / This is our official repository. **
