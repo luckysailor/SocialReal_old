@@ -4,9 +4,9 @@ By [SocialReal](https://github.com/SocialReal/).
 
 ####- A big chat for groups of people, with very topics
 
-  - Supply of informations in real time
-  - Created for persons respected with important subjects about news and articles
-  - A new IRC
+  - Supply of informations almost in real time with links filtered by experts
+  - Created for persons experts in important subjects about articles
+  - A new type of IRC and maybe to reform the actual IRC
 
 ###-Acknowledgements
 
