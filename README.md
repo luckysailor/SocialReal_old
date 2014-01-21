@@ -1,4 +1,4 @@
-# SOCIAL - RE ![SocialReal Logo](https://raw.github.com/SocialReal/SocialReal/master/logo.gif) L
+# SOCIAL - REAL [![Build Status](https://travis-ci.org/SocialReal/SocialReal.png?branch=master)](https://travis-ci.org/SocialReal/SocialReal)
 
 By [SocialReal](https://github.com/SocialReal/).
 
