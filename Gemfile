@@ -28,13 +28,23 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'font-awesome-rails'
 
+# Twitter-bootstrap
 gem 'bootstrap-on-rails'
+
+gem 'devise'
+
+gem 'cancan'
+
+# Bitmask to cancan
+gem 'role_model'
 
 group :development do
 
  gem 'capistrano'
 
  gem 'sqlite3'
+
+ gem 'mailcatcher'
 
 end
 
