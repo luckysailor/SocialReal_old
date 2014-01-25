@@ -27,9 +27,11 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.1)
     atomic (1.1.14)
+    bcrypt-ruby (3.1.2)
     bootstrap-on-rails (0.0.2)
       less-rails
     builder (3.1.4)
+    cancan (1.6.10)
     capistrano (3.1.0)
       i18n
       rake (>= 10.0.0)
@@ -42,10 +44,20 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     commonjs (0.2.7)
+    daemons (1.1.9)
+    devise (3.2.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     execjs (2.0.2)
     font-awesome-rails (4.0.3.1)
       railties (>= 3.2, < 5.0)
+    haml (4.0.5)
+      tilt
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -64,14 +76,27 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mailcatcher (0.2.4)
+      eventmachine
+      haml
+      i18n
+      json
+      mail
+      sinatra
+      skinny (>= 0.1.2)
+      sqlite3-ruby
+      thin
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.4)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
+    orm_adapter (0.5.0)
     polyglot (0.3.3)
     rack (1.5.2)
+    rack-protection (1.5.2)
+      rack
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.2)
@@ -89,11 +114,19 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.1.1)
     ref (1.0.5)
+    role_model (0.8.1)
     sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
+    sinatra (1.4.4)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    skinny (0.2.3)
+      eventmachine (~> 1.0.0)
+      thin (~> 1.5.0)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -104,6 +137,8 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     sqlite3 (1.3.8)
+    sqlite3-ruby (1.3.3)
+      sqlite3 (>= 1.3.3)
     sshkit (1.3.0)
       net-scp (>= 1.1.2)
       net-ssh
@@ -113,6 +148,10 @@ GEM
     therubyracer (0.12.0)
       libv8 (~> 3.16.14.0)
       ref
+    thin (1.5.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
     thor (0.18.1)
     thread_safe (0.1.3)
       atomic
@@ -127,19 +166,25 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    warden (1.2.3)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   bootstrap-on-rails
+  cancan
   capistrano
   coffee-rails (~> 4.0.0)
+  devise
   font-awesome-rails
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  mailcatcher
   rails (= 4.0.2)
+  role_model
   sass-rails (~> 4.0.0)
   sqlite3
   therubyracer

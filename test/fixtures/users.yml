@@ -1,0 +1,5 @@
+one:
+ email: 'someone@test.com'
+ encrypted_password: '12345678'
+
+two: {}
