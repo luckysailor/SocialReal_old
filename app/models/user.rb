@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   # :guest = 32
   # admin+master+guardian+partner+member+guest = 63
   #
-  # Notice: 'New user' default is :guest or bitbask 32.
+  # Notice: 'New user' default is :guest or bitmask 32.
   roles_attribute :roles_mask
   # Please, not change the order!
   roles :admin, :master, :guardian, :partner, :member, :guest

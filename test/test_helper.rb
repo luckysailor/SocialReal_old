@@ -11,5 +11,6 @@ class ActiveSupport::TestCase
   # -- they do not yet inherit this setting
   fixtures :all
 
-  # Add more helper methods to be used by all tests here...
+  # Load all supports
+  Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
 end
