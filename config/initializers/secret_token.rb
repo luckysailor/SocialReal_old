@@ -1,12 +1,1 @@
-# Be sure to restart your server when you modify this file.
-
-# Your secret key is used for verifying the integrity of signed cookies.
-# If you change this key, all old signed cookies will become invalid!
-
-# Make sure the secret is at least 30 characters and all random,
-# no regular words or you'll be exposed to dictionary attacks.
-# You can use `rake secret` to generate a secure secret key.
-
-# Make sure your secret_key_base is kept private
-# if you're sharing your code publicly.
-SocialReal::Application.config.secret_key_base = ENV['SOCIALREAL_TOKEN']
+SocialReal::Application.config.secret_key_base = "7e93d66322ab45774abdcae0901d0e70781c34a5d17bae2b82c05163668001aee2bab695c9c5dbcdf967cf7e2d7fc3a8a9e2ff18a3303f3e0373d4033664a0c9"
