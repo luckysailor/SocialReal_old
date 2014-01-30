@@ -8,7 +8,7 @@ By [SocialReal](https://github.com/SocialReal/).
   - Created for persons experts in important subjects about articles
   - A new type of IRC and maybe to reform the actual IRC
 
-###-Acknowledgements
+###- Acknowledgements
 
   - Astro - Inventor
   - Optimus - Programmer
