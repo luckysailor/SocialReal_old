@@ -8,7 +8,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"><span class="fa fa-shield"></span> RealGlobal</a>
+            <a class="navbar-brand" href="index.html"><span class="fa fa-shield"></span> Social Real</a>
             <a href="#" class='lte-menu-sm visible-xs navbar-brand'>
                 <span class="fa fa-list"></span>
             </a>
@@ -50,7 +50,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Friends</a></li>
-                        <li><a href="#">Settings</a></li>
+                        <li><a href="#"><%= link_to('Settings', edit_user_registration_path) %></a></li>
                         <li class="divider"></li>
                         <li><a href="#">Privacy</a></li>
                         <% if user_signed_in? %>

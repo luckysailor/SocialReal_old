@@ -1,16 +1,60 @@
-<h2>Change your password</h2>
+<div class="row-fluid">
+   <div class="valign col-md-4 col-md-offset-4 col-sm-5 col-sm-offset-4 col-xs-12">
+      <h1 class="text-center signika"><i class="fa fa-pencil"></i> Change password</h1>
+   </div>
+</div>
 
-<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
-  <%= f.hidden_field :reset_password_token %>
+<div class="row-fluid">
+  <div class="col-md-4 col-md-offset-4 col-sm-5 col-sm-offset-4 col-xs-12">
+      
+      <% if devise_error_messages!.present? %>
+       <div class="alert alert-danger devise-error">
+         <%= devise_error_messages! %>
+       </div>
+      <% end %>
 
-  <div><%= f.label :password, "New password" %><br />
-  <%= f.password_field :password, :autofocus => true %></div>
+   <div class="box box-light-blue">
+      <div class="box-header">
+         <div class="box-title signika">
+            <b>Social Real - Account Support</b>
+         </div>
+      </div>
+   
+   <div class="box-body bg-white">
+        <%= form_for(resource, :as => resource_name,
+         :url => password_path(resource_name), :html => { :method => :put }) do |f| %>
+      
+        <%= f.hidden_field :reset_password_token %>
 
-  <div><%= f.label :password_confirmation, "Confirm new password" %><br />
-  <%= f.password_field :password_confirmation %></div>
+          <div class="form-group"> 
+             <div class="input-group">
+                <span class="input-group-addon control">
+                 <i class="fa fa-envelope"></i> Your new password
+                </span>
+                <%= f.password_field :password, :autofocus => true, 
+                 class: 'form-control', placeholder: 'Your new password' %>   
+             </div>
+          </div>
 
-  <div><%= f.submit "Change my password" %></div>
-<% end %>
+          <div class="form-group"> 
+             <div class="input-group">
+                <span class="input-group-addon control">
+                 <i class="fa fa-envelope"></i> Retype Password
+                </span>
+                <%= f.password_field :password_confirmation,
+                 class: 'form-control', placeholder: 'Retype Password' %>   
+             </div>
+          </div>
 
-<%= render "users/shared/links" %>
+          <div class="form-group">    
+             <%= f.submit "Change my password", class: 'btn-block btn btn-light-blue' %>
+          </div>
+
+        <% end %>
+
+      <%= render "users/shared/links" %>
+    
+    </div>
+   </div>
+  </div>
+</div>
