@@ -2,6 +2,11 @@ class User < ActiveRecord::Base
   require 'role_model'
   include RoleModel
 
+  attr_accessor :terms_of_use
+
+  validates_acceptance_of :terms_of_use,
+   message: 'Social Real, you need accept.'
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,\
          :confirmable, :lockable, :timeoutable
