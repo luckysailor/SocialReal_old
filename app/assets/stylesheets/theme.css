@@ -9,6 +9,11 @@
 a:hover {
   text-decoration: none;
 }
+
+.devise-error h2 {
+  font-size: 15px;
+}
+
 .navbar.navbar-theme a.navbar-brand {
   font-family: 'Signika Negative', sans-serif;
   color: #f9f9f9;
