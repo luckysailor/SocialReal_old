@@ -28,8 +28,6 @@ GEM
     arel (4.0.1)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    bootstrap-on-rails (0.0.2)
-      less-rails
     builder (3.1.4)
     cancan (1.6.10)
     capistrano (3.1.0)
@@ -72,6 +70,8 @@ GEM
     less-rails (2.4.2)
       actionpack (>= 3.1)
       less (~> 2.4.0)
+    less-rails-bootstrap (3.0.6)
+      less-rails (~> 2.4.2)
     libv8 (3.16.14.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -173,7 +173,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-on-rails
   cancan
   capistrano
   coffee-rails (~> 4.0.0)
@@ -182,6 +181,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   less-rails
+  less-rails-bootstrap
   mailcatcher
   rails (= 4.0.2)
   role_model
