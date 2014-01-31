@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'font-awesome-rails'
 
 # Twitter-bootstrap
-gem 'bootstrap-on-rails'
+gem 'less-rails-bootstrap'
 
 gem 'devise'
 
