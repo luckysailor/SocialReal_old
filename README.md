@@ -11,7 +11,6 @@ By [SocialReal](https://github.com/SocialReal/).
 ###- Acknowledgements
 
   - Astro - Inventor
-  - Optimus - Programmer
   - Saturn - Programmer
 
 ## Contributing
