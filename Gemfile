@@ -39,14 +39,18 @@ gem 'cancan'
 gem 'role_model'
 
 group :development do
-
  gem 'capistrano'
-
- gem 'sqlite3'
-
  gem 'mailcatcher'
-
 end
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+group :test do
+	gem 'minitest-spec-rails'
+	gem 'capybara'
+	gem 'selenium-webdriver'
+end
+
+group :test, :development do
+	gem 'sqlite3'
+ gem 'debugger'
+  gem 'spring'
+end

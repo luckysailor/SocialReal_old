@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   require 'role_model'
   include RoleModel
+  include Bitmask
 
   attr_accessor :terms_of_use
 
@@ -18,7 +19,6 @@ class User < ActiveRecord::Base
   # :partner = 8
   # :member = 16
   # :guest = 32
-  # admin+master+guardian+partner+member+guest = 63
   #
   # Notice: 'New user' default is :guest or bitmask 32.
   roles_attribute :roles_mask

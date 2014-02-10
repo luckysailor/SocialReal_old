@@ -34,6 +34,14 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (~> 1.3)
+    capybara (2.2.1)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    childprocess (0.4.0)
+      ffi (~> 1.0, >= 1.0.11)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -41,8 +49,15 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    columnize (0.3.6)
     commonjs (0.2.7)
     daemons (1.1.9)
+    debugger (1.6.5)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.3.1)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.3.1)
     devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -52,6 +67,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.2)
+    ffi (1.9.3)
     font-awesome-rails (4.0.3.1)
       railties (>= 3.2, < 5.0)
     haml (4.0.5)
@@ -87,11 +103,17 @@ GEM
       sqlite3-ruby
       thin
     mime-types (1.25.1)
+    mini_portile (0.5.2)
     minitest (4.7.5)
+    minitest-spec-rails (4.7.6)
+      minitest (~> 4.7)
+      rails (>= 3.0, < 4.1)
     multi_json (1.8.4)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.7.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -115,11 +137,17 @@ GEM
     rake (10.1.1)
     ref (1.0.5)
     role_model (0.8.1)
+    rubyzip (1.1.0)
     sass (3.2.13)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
+    selenium-webdriver (2.39.0)
+      childprocess (>= 0.2.5)
+      multi_json (~> 1.0)
+      rubyzip (~> 1.0)
+      websocket (~> 1.0.4)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -127,6 +155,7 @@ GEM
     skinny (0.2.3)
       eventmachine (~> 1.0.0)
       thin (~> 1.5.0)
+    spring (1.1.0)
     sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -168,6 +197,9 @@ GEM
       json (>= 1.8.0)
     warden (1.2.3)
       rack (>= 1.0)
+    websocket (1.0.7)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
 
 PLATFORMS
   ruby
@@ -175,7 +207,9 @@ PLATFORMS
 DEPENDENCIES
   cancan
   capistrano
+  capybara
   coffee-rails (~> 4.0.0)
+  debugger
   devise
   font-awesome-rails
   jbuilder (~> 1.2)
@@ -183,9 +217,12 @@ DEPENDENCIES
   less-rails
   less-rails-bootstrap
   mailcatcher
+  minitest-spec-rails
   rails (= 4.0.2)
   role_model
   sass-rails (~> 4.0.0)
+  selenium-webdriver
+  spring
   sqlite3
   therubyracer
   turbolinks
