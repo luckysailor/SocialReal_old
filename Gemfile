@@ -51,6 +51,6 @@ end
 
 group :test, :development do
 	gem 'sqlite3'
- gem 'debugger'
+# gem 'debugger'
   gem 'spring'
 end
