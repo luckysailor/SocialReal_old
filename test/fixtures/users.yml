@@ -1,5 +1,17 @@
-one:
- email: 'someone@test.com'
- encrypted_password: '12345678'
+user_confirmed:
+ email: 'confirmed@test.com'
+ encrypted_password: '$2a$10$d4Di4gi4RYjTinxVWjhiKO52WOOZ1nSDPkmh9A4usbFEnFlfM.JLK' #12345678
+ confirmed_at: <%= Time.now.utc %>
+ confirmation_sent_at: <%= Time.now.utc  %>
 
-two: {}
+user_not_confirmed:
+ email: 'notconfirmed@test.com'
+ encrypted_password: '$2a$10$d4Di4gi4RYjTinxVWjhiKO52WOOZ1nSDPkmh9A4usbFEnFlfM.JLK' #12345678
+ confirmation_sent_at: <%= Time.now.utc  %>
+
+user_bitmask_invalid:
+ email: 'invalid@test.com'
+ encrypted_password: '$2a$10$d4Di4gi4RYjTinxVWjhiKO52WOOZ1nSDPkmh9A4usbFEnFlfM.JLK' #12345678
+ roles_mask: '0'
+ confirmed_at: <%= Time.now.utc  %>
+ confirmation_sent_at: <%= Time.now.utc  %>

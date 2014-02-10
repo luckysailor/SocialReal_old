@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class DashboardControllerTest < ActionController::TestCase
-
  include Devise::TestHelpers
 
  test "should open dasbhoard index and request authentication" do

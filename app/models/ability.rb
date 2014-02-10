@@ -34,14 +34,15 @@ class Ability
       case
       when user.roles_mask == 1 #admin
         can :manage, :all
-      #when user.has_hole == 2 #master
-      # 
-      #when user.has_hole == 4 #guardian
-      #
-      #when user.has_hole == 8 #partner
-      # 
-      #when user.has_hole == 16 #member
-      #
+      when user.roles_mask == 2 #master
+       can :read, :dashboard
+       can :manage, :roles
+      when user.roles_mask == 4 #guardian
+       can :read, :dashboard
+      when user.roles_mask == 8 #partner
+       can :read, :dashboard
+      when user.roles_mask == 16 #member
+       can :read, :dashboard
       when user.roles_mask == 32 #guest
        can :read, :dashboard
       end

@@ -1,7 +1,7 @@
 class DashboardController < ApplicationController
- before_action :authenticate_user!
- authorize_resource :class => false
+	before_action :authenticate_user!
+	authorize_resource :class => false
 
- def index
- end
+	def index
+	end
 end

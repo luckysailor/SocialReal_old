@@ -1,19 +1,20 @@
 require 'test_helper'
-
+require 'capybara/rails'
+ 
 class DashboardTest < ActionDispatch::IntegrationTest
+ 
+ include Capybara::DSL
  test "should open dasbhoard authenticated" do
- 	user = create_user_and_skip_confirmation
- 	post '/users/sign_in',\
- 	 user: { email: user.email, password: '12345678' }
- 	assert_redirected_to dashboard_path
+ 	sign_in_as_user()
+ 	assert_equal dashboard_path, current_path
  end
 
  test "should deny access whether user not are guest or major" do
- 	user = create_user_with_bitmask 0
- 	post_via_redirect '/users/sign_in',\
- 	 user: { email: user.email, password: '12345678' }
-
- 	get dashboard_path
- 	assert_redirected_to root_path
+ 	user_invalid = users(:user_bitmask_invalid)
+ 	sign_in_as_user(user_invalid)
+ 	# TODO
+ 	# When the home/index is working, we need check the message sent
+ 	# with alert, that the user not have permissions to do that.
+ 	assert_equal root_path, current_path
  end
 end
