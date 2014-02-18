@@ -3,6 +3,7 @@ module Bitmask
 
   included do
     validate do
+      return unless self.roles_mask_changed?
       errors.add(:roles_mask, :invalid) unless check_bitmask(self.roles_mask)
     end
   end
