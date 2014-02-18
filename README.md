@@ -2,7 +2,7 @@
 
 By [SocialReal](https://github.com/SocialReal/).
 
-####- A big chat for groups of people, with very topics
+####- A big chat for groups of people, with many topics
 
   - Supply of informations almost in real time with links filtered by experts
   - Created for persons experts in important subjects about articles
