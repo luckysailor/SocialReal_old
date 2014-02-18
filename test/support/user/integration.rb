@@ -1,4 +1,4 @@
-require 'active_support/test_case' 
+require 'active_support/test_case'
 
 class ActiveSupport::TestCase
   def sign_in_as_user(user=nil, options={})

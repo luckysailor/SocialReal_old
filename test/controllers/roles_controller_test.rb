@@ -1,7 +1,7 @@
 require "test_helper"
 
 class Users::RolesControllerTest < ActionController::TestCase
- include Devise::TestHelpers
+  include Devise::TestHelpers
 
 	test "should get index" do
 		user = create_user_with_bitmask 1
