@@ -2,6 +2,7 @@ class Users::RolesController < ApplicationController
 	before_action :authenticate_user!
 	authorize_resource :class => :roles
 	before_action :current_can_update?, only: [:update]
+	layout 'dashboard'
 
 	def index
 	end
