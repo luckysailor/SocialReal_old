@@ -1,6 +1,5 @@
 class Users::RolesController < ApplicationController
-	before_action :authenticate_user!
-	authorize_resource :class => :roles
+	include Authenticate
 	before_action :current_can_update?, only: [:update]
 	layout 'dashboard'
 

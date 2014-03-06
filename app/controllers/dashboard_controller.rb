@@ -1,6 +1,5 @@
 class DashboardController < ApplicationController
-	before_action :authenticate_user!
-	authorize_resource :class => false
+	include Authenticate
 	layout 'dashboard'
 
 	def index

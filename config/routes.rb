@@ -1,4 +1,8 @@
 SocialReal::Application.routes.draw do
+  resources :profiles
+
+  get 'my_profile' => "profiles#show"
+
   devise_for :users, controllers: { registrations: 'users/registrations' }
   devise_scope :users do
     get 'users/roles' => "users/roles#index"

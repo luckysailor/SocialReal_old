@@ -10,14 +10,6 @@ a:hover {
   text-decoration: none;
 }
 
-.devise-error h2 {
-  font-size: 15px;
-}
-
-.field_with_errors .form-control {
-  display: inline;
-  border: 1px solid rgba(189,74,72, 0.5);
-}
 .navbar.navbar-theme a.navbar-brand {
   font-family: 'Signika Negative', sans-serif;
   color: #f9f9f9;

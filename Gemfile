@@ -35,6 +35,10 @@ gem 'devise'
 
 gem 'cancan'
 
+gem 'carrierwave'
+
+gem 'rmagick'
+
 # Bitmask to cancan
 gem 'role_model'
 

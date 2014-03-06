@@ -31,20 +31,25 @@ class Ability
 
       user ||= User.new # guest user (not logged in)
 
+      global_ability = -> {
+        can :read, :dashboard
+        can :manage, Profile
+      }
+
       case
       when user.roles_mask == 1 #admin
         can :manage, :all
       when user.roles_mask == 2 #master
-       can :read, :dashboard
+       global_ability.call
        can :manage, :roles
       when user.roles_mask == 4 #guardian
-       can :read, :dashboard
+       global_ability.call
       when user.roles_mask == 8 #partner
-       can :read, :dashboard
+       global_ability.call
       when user.roles_mask == 16 #member
-       can :read, :dashboard
+       global_ability.call
       when user.roles_mask == 32 #guest
-       can :read, :dashboard
+       global_ability.call
       end
   end
 end

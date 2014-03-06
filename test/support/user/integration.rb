@@ -3,7 +3,7 @@ require 'active_support/test_case'
 class ActiveSupport::TestCase
   def sign_in_as_user(user=nil, options={})
     visit new_user_session_path
-    user ||= create_user_and_skip_confirmation
+    user ||= create_user_with_profile
     fill_in 'user_email', :with => options[:email] || user.email
     fill_in 'user_password', :with => options[:password] || '12345678'
     check 'remember me' if options[:user_remember_me] == true

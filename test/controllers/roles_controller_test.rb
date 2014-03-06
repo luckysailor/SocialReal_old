@@ -12,7 +12,7 @@ class Users::RolesControllerTest < ActionController::TestCase
 
  	test "should find user by email" do
 		user = create_user_with_bitmask 1
-		user_guest = create_user_and_skip_confirmation
+		user_guest = create_user_with_profile
  		sign_in user
  		
  		post :show, role: { email: user.email }
@@ -30,7 +30,7 @@ class Users::RolesControllerTest < ActionController::TestCase
 
 	test "should change bitmask" do
 		user_admin = create_user_with_bitmask 1
-		user_guest = create_user_and_skip_confirmation
+		user_guest = create_user_with_profile
  		sign_in user_admin
 
 		assert_difference("User.last.roles_mask", -30) do
@@ -55,7 +55,7 @@ class Users::RolesControllerTest < ActionController::TestCase
 
 	test "should deny the request if bit_mask is bigger which user requester" do
 		user_master = create_user_with_bitmask 2
-		user_guest = create_user_and_skip_confirmation
+		user_guest = create_user_with_profile
  		sign_in user_master
 
 		assert_no_difference("User.last.roles_mask") do
@@ -68,7 +68,7 @@ class Users::RolesControllerTest < ActionController::TestCase
 
 	test "should deny if bit_mask is invalid" do
 		user_master = create_user_with_bitmask 2
-		user_guest = create_user_and_skip_confirmation
+		user_guest = create_user_with_profile
  		sign_in user_master
 
 		assert_no_difference("User.last.roles_mask") do

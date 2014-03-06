@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 11
+  name: 'Someone1'
+  email: 'someone1@social-real.tk'
+  location: 'New York City'
+  language: 'English'
+  favorite_topics: 'Financial'
+  my_articles: 'social-real.tk/my_article'
+  my_softwares_client: 'mIRC and XChat'
+  hidden: true
+
+two:
+  user_id: 10
+  name: 'Someone2'
+  email: 'someone2@social-real.tk'
+  location: 'San Francisco'
+  language: 'English'
+  favorite_topics: 'Politics'
+  my_articles: 'social-real.tk/my_article'
+  my_softwares_client: 'Pidgin'
+  hidden: false

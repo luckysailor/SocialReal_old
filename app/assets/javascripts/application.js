@@ -1,5 +1,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
-//= require twitter/bootstrap
+//= require lteApp.js
+//= require lteTree.js

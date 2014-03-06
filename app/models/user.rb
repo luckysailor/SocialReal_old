@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_one :profile
+
   require 'role_model'
   include RoleModel
   include Bitmask
@@ -24,4 +26,8 @@ class User < ActiveRecord::Base
   roles_attribute :roles_mask
   # Please, not change the order!
   roles :admin, :master, :guardian, :partner, :member, :guest
+
+  def self.user_have_profile?(user)
+    user.profile.present?
+  end
 end
