@@ -37,10 +37,12 @@ gem 'cancan'
 
 gem 'carrierwave'
 
-gem 'rmagick'
-
 # Bitmask to cancan
 gem 'role_model'
+
+group :production do
+	gem 'rmagick'
+end
 
 group :development do
  gem 'capistrano'
