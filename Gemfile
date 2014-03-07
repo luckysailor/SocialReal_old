@@ -40,7 +40,7 @@ gem 'carrierwave'
 # Bitmask to cancan
 gem 'role_model'
 
-group :production do
+group :production, :development do
 	gem 'rmagick'
 end
 
