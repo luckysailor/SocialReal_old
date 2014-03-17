@@ -40,13 +40,15 @@ gem 'carrierwave'
 # Bitmask to cancan
 gem 'role_model'
 
+gem 'draper'
+
 group :production, :development do
 	gem 'rmagick'
 end
 
 group :development do
- gem 'capistrano'
- gem 'mailcatcher'
+	gem 'capistrano'
+	gem 'mailcatcher'
 end
 
 group :test do

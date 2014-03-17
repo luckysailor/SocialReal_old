@@ -10,8 +10,11 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1
   def show
-    # FIX-ME with gem Draper-Decorator
-    @current_profile_is_from_current_user = current_user_can_edit?
+    if @profile.hidden == true
+      redirect_to current_user.profile, alert: 'This profile has been set as hidden by your owner.'
+    else
+      @profile = @profile.decorate(context: {current_user_can_edit?: current_user_can_edit?})
+    end
   end
 
   # GET /profiles/new
@@ -25,7 +28,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
-    render action: 'show' unless current_user_can_edit?
+    redirect_to current_user.profile unless current_user_can_edit?
   end
 
   # POST /profiles
@@ -65,11 +68,11 @@ class ProfilesController < ApplicationController
   
   # Use callbacks to share common setup or constraints between actions.
   def set_profile
-    @profile = current_user_profile
+    @profile = Profile.find_by_id(params[:id])
   end
 
   def current_user_can_edit?
-    set_profile.user == current_user
+    @profile.user == current_user
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

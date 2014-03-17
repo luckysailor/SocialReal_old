@@ -2,22 +2,11 @@
   <div class='box box-primary'>
    <div class='box-header'>
     <h3 class="box-title">
-      <%= profile_photo(current_user, {format: :thumb, style: 'img-circle dashboard-mini-img'}) %> Profile of <%= first_name(h(@profile.name)) %>
+      <%= profile_photo(@profile, {format: :thumb, style: 'img-circle dashboard-mini-img'}) %> Profile of <%= first_name(h(@profile.name)) %>
     </h3>
-    <p class="box-title">
-    <% if @current_profile_is_from_current_user %>
-     <%= link_to 'Edit', edit_profile_path(@profile) %>
-    <% end %>
-    </p>
+    <%= @profile.edit_profile %>
    </div>
   
-  <div class='box-body'>
-    <% if notice %>
-    <div class="alert alert-success">
-     <%= notice %>
-    </div>
-    <% end %>
-
     <div class="show-profile">
       <div class="row">
         <div class="col-md-6">
